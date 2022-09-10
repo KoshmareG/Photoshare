@@ -1,3 +1,7 @@
 .background-color{
     background-color: rgb(252,252,252);
 }
+
+.top-margin{
+    margin-top: 12vh;
+}

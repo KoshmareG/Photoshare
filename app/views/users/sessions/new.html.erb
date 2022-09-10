@@ -1,26 +1,19 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="columns is-mobile is-centered top-margin">
+  <div class="column is-3-desktop">
+    <div class="box">
+      <%= image_tag("Photoshare.png", width: '200') %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input mb-3" %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: t("password"), class: "input mb-3" %>
+        <%= f.submit t("log_in"), class: "button is-info is-fullwidth mb-3" %>
+      <% end %>
+      <p style="text-align: center"><%= link_to t("sign_in_page.forgot_password"), new_user_password_url, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="box">
+      <p style="text-align: center"><%= t("sign_in_page.dont_have_account") %><%= link_to t("sign_in_page.sign_up"), new_user_registration_url, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
+    </div>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+  <div class="column is-3-desktop">
+    <p>To do</p>
+  </div>
+</div>
