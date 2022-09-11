@@ -1,7 +1,11 @@
 <div class="columns is-mobile is-centered top-margin">
-  <div class="column is-3-desktop">
+  <div class="column is-3-desktop is-12-mobile">
     <div class="box">
-      <%= image_tag("Photoshare.png", width: '200') %>
+      <div class="columns is-mobile is-centered mb-1">
+        <div class="column is-8-desktop">
+          <%= image_tag("Photoshare_mini.png", class: "image") %>
+        </div>
+      </div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input mb-3" %>
         <%= f.password_field :password, autocomplete: "current-password", placeholder: t("password"), class: "input mb-3" %>
@@ -13,7 +17,7 @@
       <p style="text-align: center"><%= t("sign_in_page.dont_have_account") %><%= link_to t("sign_in_page.sign_up"), new_user_registration_url, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
     </div>
   </div>
-  <div class="column is-3-desktop">
+  <div class="column is-3-desktop is-hidden-mobile">
     <p>To do</p>
   </div>
 </div>
