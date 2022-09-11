@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <p>Photoshare</p>
@@ -31,6 +32,7 @@
         </div>
       </div>
     </nav>
+    <% end %>
     <div class="container is-fluid">
       <%= yield %>
     </div>
