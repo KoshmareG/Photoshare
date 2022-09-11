@@ -6,6 +6,7 @@
           <%= image_tag("Photoshare_mini.png", class: "image") %>
         </div>
       </div>
+      <p class="has-text-weight-semibold mb-3" style="text-align: center; color: rgb(130,130,130)"><%= flash[:alert] %></p>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input mb-3" %>
         <%= f.password_field :password, autocomplete: "current-password", placeholder: t("password"), class: "input mb-5" %>
