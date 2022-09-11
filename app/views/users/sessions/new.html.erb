@@ -1,4 +1,4 @@
-<div class="columns is-mobile is-centered top-margin">
+<div class="columns is-mobile is-centered top-margin-20">
   <div class="column is-3-desktop is-12-mobile">
     <div class="box">
       <div class="columns is-mobile is-centered mb-1">
@@ -8,13 +8,13 @@
       </div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input mb-3" %>
-        <%= f.password_field :password, autocomplete: "current-password", placeholder: t("password"), class: "input mb-3" %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: t("password"), class: "input mb-5" %>
         <%= f.submit t("log_in"), class: "button is-info is-fullwidth mb-3" %>
       <% end %>
       <p style="text-align: center"><%= link_to t("sign_in_page.forgot_password"), new_user_password_url, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
     </div>
     <div class="box">
-      <p style="text-align: center"><%= t("sign_in_page.dont_have_account") %><%= link_to t("sign_in_page.sign_up"), new_user_registration_url, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
+      <p style="text-align: center"><%= t("sign_in_page.dont_have_account") %><%= link_to t("sign_in_page.sign_up"), new_user_registration_url, data: {turbo: false}, class: "is-size-6", style: "text-decoration: none; text-align: center" %></p>
     </div>
   </div>
   <div class="column is-3-desktop is-hidden-mobile">
