@@ -3,6 +3,7 @@ ru:
   password_confirmation: "Повторите пароль"
   remember_me: "Запомнить меня"
   log_in: "Вход"
+  or: "или"
   sign_in_page:
     forgot_password: "Забыли пароль?"
     dont_have_account: "У Вас нет аккаунта? "
@@ -11,6 +12,12 @@ ru:
     sign_up: "Регистрация"
     username: "Логин"
     sign_in: "Войти"
+  new_password_page:
+    send_link: "Отправить ссылку"
+    trouble: "Проблеммы с аккаунтом?"
+    description: "Укажите Email для получения ссылки на восстановления доступа к аккаунту"
+    new_account: "Создайте новый аккаунт"
+    sign_in: "Войти в аккаунт"
   devise_errors:
     username_blank: "Необходимо указать логин"
     username_taken: "Логин уже занят другим пользователем"

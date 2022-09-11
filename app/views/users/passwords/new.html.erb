@@ -1,16 +1,16 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="columns is-mobile is-centered top-margin-15">
+  <div class="column is-4-desktop is-12-mobile">
+    <div class="box">
+      <p style="text-align: center" class="has-text-weight-semibold mb-2"><%= t("new_password_page.trouble") %></p>
+      <p style="text-align: center" class="has-text-weight-semibold is-size-6"><%= t("new_password_page.description") %></p>
+      <p class="has-text-weight-semibold mb-3" style="text-align: center; color: rgb(130,130,130)"><%= devise_error_messages %></p>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "input mb-3" %>
+        <%= f.submit t("new_password_page.send_link"), class: "button is-info is-fullwidth mb-5" %>
+      <% end %>
+      <h1 class="has-text-weight-semibold mb-5"><span><%= t("or") %></span></h1>
+      <p style="text-align: center" class="has-text-weight-semibold mb-5"><%= link_to t("new_password_page.new_account"), new_user_registration_url, data: {turbo: false} %></p>
+      <%= link_to t("new_password_page.sign_in"), new_user_session_url, data: {turbo: false}, class: "button is-light is-fullwidth" %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>
