@@ -1,29 +1,20 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="columns is-mobile is-centered top-margin-15">
+  <div class="column is-4-desktop is-12-mobile">
+    <div class="box">
+      <div class="columns is-mobile is-centered mb-1">
+        <div class="column is-8">
+          <%= image_tag("Photoshare_mini.png", class: "image") %>
+        </div>
+      </div>
+      <%= link_to t("sign_up_page.sign_in"), new_user_session_url, data: {turbo: false}, class: "button is-info is-fullwidth mb-5" %>
+      <div class="line mb-5"></div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.text_field :username, placeholder: t("sign_up_page.username"), autofocus: true, class: "input mb-3" %>
+        <%= f.email_field :email, placeholder: "Email", class: "input mb-3" %>
+        <%= f.password_field :password, placeholder: t("password"), class: "input mb-3" %>
+        <%= f.password_field :password_confirmation, placeholder: t("password_confirmation"), class: "input mb-5" %>
+        <%= f.submit t("sign_up_page.sign_up"), class: "button is-info is-fullwidth mb-3" %>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

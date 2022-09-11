@@ -1,9 +1,14 @@
 ru:
   password: "Пароль"
+  password_confirmation: "Повторите пароль"
   remember_me: "Запомнить меня"
   log_in: "Вход"
   sign_in_page:
     forgot_password: "Забыли пароль?"
     dont_have_account: "У Вас нет аккаунта? "
     sign_up: "Зарегистрируйтесь"
+  sign_up_page:
+    sign_up: "Регистрация"
+    username: "Логин"
+    sign_in: "Войти"
     

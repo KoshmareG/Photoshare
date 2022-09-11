@@ -2,6 +2,14 @@
     background-color: rgb(252,252,252);
 }
 
-.top-margin{
+.top-margin-20{
     margin-top: 20vh;
+}
+
+.top-margin-15{
+    margin-top: 15vh;
+}
+
+.line{
+    border-bottom: 1px solid rgb(200,200,200);
 }
