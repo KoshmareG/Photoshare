@@ -16,22 +16,7 @@
 
   <body>
     <% if user_signed_in? %>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <p>Photoshare</p>
-      </div>
-    
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-          <a class="navbar-item">
-            Documentation
-          </a>
-        </div>
-      </div>
-    </nav>
+      <%= render "layouts/navbar" %>
     <% end %>
     <div class="container is-fluid">
       <%= yield %>
