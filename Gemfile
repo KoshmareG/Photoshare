@@ -51,6 +51,8 @@ gem "i18n"
 # For validation attachments
 gem "file_validators"
 
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
