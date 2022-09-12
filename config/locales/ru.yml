@@ -23,8 +23,8 @@ ru:
     username_taken: "Логин уже занят другим пользователем"
     email_blank: "Необходимо указать Email адрес"
     email_taken: "Аккаунт с таким Email уже существует"
+    email_not_found: "Email не найден"
     password_blank: "Необходимо указать пароль"
     password_confirmation_confirmation: "Пароли не совпадают"
     password_too_short: "Пароль слишком короткий. Необходмимо минимум 6 знаков"
-
     
