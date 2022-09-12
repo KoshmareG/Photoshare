@@ -15,6 +15,8 @@ module Photoshare
 
     config.i18n.default_locale = :ru
 
+    config.assets.paths << Rails.root.join('app/assets/images/icons')
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
