@@ -63,3 +63,10 @@ h1 span{
 .custom-navbar-item{
     display: inline-block;
 }
+
+/* Buttons */
+
+.icon-button{
+    border: none;
+    background-color: transparent;
+}

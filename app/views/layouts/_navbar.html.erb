@@ -2,19 +2,20 @@
   <div class="container is-fluid">
     <div class="custom-navbar-start">
       <%= link_to image_tag("Photoshare_mini.png", class: "navbar-logo"), root_url %>
+    </div>
+    <div class="custom-navbar-end">
+      <div class="is-hidden-mobile">
+        <%= render "layouts/navbar_links" %>
       </div>
-      <div class="custom-navbar-end">
-        <div class="custom-navbar-item">
-          <%= link_to image_tag("icons/house.svg", size: "24", class: "navbar-icon"), root_url %>
+      <div class="custom-navbar-item is-hidden-desktop is-hidden-tablet">
+        <div class="dropdown is-right" id="navbar">
+          <%= button_tag image_tag("icons/list.svg", size: "24", class: "btn navbar-icon"), onclick: "dropdown('navbar')", class: "btn icon-button" %>
+          <div class="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <%= render "layouts/navbar_links" %>
+            </div>
+          </div>
         </div>
-        <div class="custom-navbar-item">
-          <%= link_to image_tag("icons/envelope.svg", size: "24", class: "navbar-icon"), root_url %>
-        </div>
-        <div class="custom-navbar-item">
-          <%= link_to image_tag("icons/plus-square.svg", size: "24", class: "navbar-icon"), root_url %>
-        </div>
-        <div class="custom-navbar-item">
-          <%= link_to image_tag("icons/heart.svg", size: "24", class: "navbar-icon"), root_url %>
       </div>
     </div>
   </div>
