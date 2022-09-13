@@ -5,7 +5,7 @@ function dropdown(elementId) {
 window.dropdown = dropdown;
 
 window.onclick = function(event) {
-    if (!event.target.matches('.button')) {
+    if (!event.target.matches('.btn')) {
         var dropdowns = document.getElementsByClassName("dropdown");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
