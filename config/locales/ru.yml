@@ -27,4 +27,7 @@ ru:
     password_blank: "Необходимо указать пароль"
     password_confirmation_confirmation: "Пароли не совпадают"
     password_too_short: "Пароль слишком короткий. Необходмимо минимум 6 знаков"
+  new_photo_page:
+    submit: "Опубликовать"
+    add_images: "Добавит фото"
     
