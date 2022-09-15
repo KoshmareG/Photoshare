@@ -98,3 +98,25 @@ h1 span{
     aspect-ratio: 1 / 1;
     background-color: rgb(245,245,245);
 }
+
+.text-area-photo{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgb(219,219,219);
+    resize: none;
+    overflow: hidden;
+    color: rgb(54,54,54);
+    line-height: 1.75;
+    caret-color: rgb(100,100,100);
+}
+
+.text-area-photo:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(185,185,185);
+}

@@ -13,14 +13,14 @@
             </div>
           </div>
         </div>
-        <div class="columns" is-multiline is-mobile>
+        <div class="columns is-gapless">
           <div class="column is-6-desktop is-12-mibile pb-0">
             <div class="image-preview">
               
             </div>
           </div>
           <div class="column is-6-desktop is-12-mibile">
-            
+            <%= f.text_area :text, rows: "1", autocomplite: :off, placeholder: t("new_photo_page.placeholder"), class: "text-area-photo" %>
           </div>
         </div>
       <% end %>
