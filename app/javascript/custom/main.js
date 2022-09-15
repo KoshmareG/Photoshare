@@ -1,3 +1,5 @@
+// Dropdown
+
 function dropdown(elementId) {
     document.getElementById(elementId).classList.toggle("is-active");
 }
@@ -15,4 +17,14 @@ window.onclick = function(event) {
             }
         }    
     }
+}
+
+// Resize textarea
+
+var textArea = document.getElementById("resize-textarea")
+
+if (textArea) textArea.oninput = function() {
+    var limit = 280;
+    textArea.style.height = 28;
+    textArea.style.height = Math.min(textArea.scrollHeight, limit)+"px";
 }
