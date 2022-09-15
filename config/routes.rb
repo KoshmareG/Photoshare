@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "photos#index"
 
+  get "home", action: :show, controller: "home"
+
   resources :photos
 end
