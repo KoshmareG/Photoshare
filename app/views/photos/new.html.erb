@@ -15,8 +15,9 @@
         </div>
         <div class="columns is-gapless">
           <div class="column is-6-desktop is-12-mibile pb-0">
-            <div class="image-preview">
-              
+            <div class="image-preview" style="position: relative;">
+              <%= image_tag("icons/image-fill.svg", size: "50", class: "new-photo-icon") %>
+              <p class="new-photo-icon mt-5"><%= t("new_photo_page.add_photo") %></p>
             </div>
           </div>
           <div class="column is-6-desktop is-12-mibile">
