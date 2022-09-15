@@ -53,8 +53,6 @@ gem "file_validators"
 
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
-gem 'paperclip', '~> 6.1'
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -4,6 +4,15 @@ ru:
   remember_me: "Запомнить меня"
   log_in: "Вход"
   or: "или"
+  devise_errors:
+    username_blank: "Необходимо указать логин"
+    username_taken: "Логин уже занят другим пользователем"
+    email_blank: "Необходимо указать Email адрес"
+    email_taken: "Аккаунт с таким Email уже существует"
+    email_not_found: "Email не найден"
+    password_blank: "Необходимо указать пароль"
+    password_confirmation_confirmation: "Пароли не совпадают"
+    password_too_short: "Пароль слишком короткий. Необходмимо минимум 6 знаков"
   sign_in_page:
     forgot_password: "Забыли пароль?"
     dont_have_account: "У Вас нет аккаунта? "
@@ -18,18 +27,13 @@ ru:
     description: "Укажите Email для получения ссылки на восстановления доступа к аккаунту"
     new_account: "Создайте новый аккаунт"
     sign_in: "Войти в аккаунт"
-  devise_errors:
-    username_blank: "Необходимо указать логин"
-    username_taken: "Логин уже занят другим пользователем"
-    email_blank: "Необходимо указать Email адрес"
-    email_taken: "Аккаунт с таким Email уже существует"
-    email_not_found: "Email не найден"
-    password_blank: "Необходимо указать пароль"
-    password_confirmation_confirmation: "Пароли не совпадают"
-    password_too_short: "Пароль слишком короткий. Необходмимо минимум 6 знаков"
   new_photo_page:
     submit: "Опубликовать"
     add_images: "Добавить фото"
     placeholder: "Описание к фото"
     add_photo: "Добавьте фото"
+  errors:
+    new_photo:
+      text_invalid: "Максимальный размер сообщения 2000 знаков"
+      photo_missing: "Для публикации необходимо выбрать фото"
     
