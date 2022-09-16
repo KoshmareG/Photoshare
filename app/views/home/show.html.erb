@@ -1,2 +1,7 @@
-This is home!!!
-<%= link_to "exit", destroy_user_session_url, data: {turbo_method: :delete} %>
+<div class="columns is-mobile is-centered mt-3">
+  <div class="column is-8-desktop is-12-mobile">
+    <div class="columns is-multiline is-mobile">
+      <%= render @photos %>
+    </div>
+  </div>
+</div>
