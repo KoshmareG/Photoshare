@@ -134,3 +134,15 @@ h1 span{
 .padding-025{
     padding: 0.25rem;
 }
+
+/* Show photo */
+
+.show-photo{
+    max-height: 85vh;
+    display: flex;
+    margin: auto;
+}
+
+.show-box{
+    background-color: black;
+}
