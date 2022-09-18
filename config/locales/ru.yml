@@ -4,6 +4,8 @@ ru:
   remember_me: "Запомнить меня"
   log_in: "Вход"
   or: "или"
+  male: "Мужской"
+  female: "Женский"
   devise_errors:
     username_blank: "Необходимо указать логин"
     username_taken: "Логин уже занят другим пользователем"
@@ -37,6 +39,17 @@ ru:
       text_invalid: "Максимальный размер сообщения 2000 знаков"
       photo_missing: "Для публикации необходимо выбрать фото"
   edit_profile:
-    main_info: "Основная информация"
+    main_info: "Профиль"
     password: "Пароль"
+    name: "Имя"
+    gender: "Пол"
+    birthday: "День рождения"
+    website: "Веб-сайт"
+    bio: "О себе"
+    save: "Сохранить"
+    success_save: "Профиль изменен"
+    errors:
+      name_too_long: "Максимальная длина имени 30 знаков"
+      website_too_long: "Максимальная длина ссылки 30 знаков"
+      bio_too_long: "Максимальная длина информации о себе 30 знаков"
     

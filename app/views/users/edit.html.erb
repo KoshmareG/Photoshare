@@ -1,5 +1,5 @@
 <div class="columns is-mobile is-centered mt-3">
-  <div class="column is-8-desktop is-12-tablet is-12-mobile">
+  <div class="column is-6-desktop is-12-tablet is-12-mobile">
     <div class="box">
       <div class="tabs is-centered">
         <ul>
@@ -7,8 +7,19 @@
           <li><%= link_to t("edit_profile.password"), edit_user_registration_url %></li>
         </ul>
       </div>
+      <p class="has-text-weight-semibold mb-3" style="text-align: center; color: rgb(130,130,130)"><%= flash[:notice] %></p>
       <%= form_for @user do |f| %>
-        
+        <%= f.label :name, t("edit_profile.name"), class: "is-size-6" %>
+        <%= f.text_field :name, class: "input is-small mb-3" %>
+        <%= f.label :gender, t("edit_profile.gender"), class: "is-size-6" %>
+        <%= f.select :gender, options_for_select([I18n.t("male"), I18n.t("female")], selected: @user.gender), {}, {class: "input is-small mb-3"} %>
+        <%= f.label :birthday, t("edit_profile.birthday"), class: "is-size-6" %>
+        <%= f.text_field :birthday, type: "date", class: "input is-small mb-3" %>
+        <%= f.label :website, t("edit_profile.website"), class: "is-size-6" %>
+        <%= f.text_field :website, class: "input is-small mb-3" %>
+        <%= f.label :bio, t("edit_profile.bio"), class: "is-size-6" %>
+        <%= f.text_area :bio, id: "resize-textarea", class: "input is-small mb-3" %>
+        <%= f.submit t("edit_profile.save"), class: "button is-info is-small is-fullwidth" %>
       <% end %>
     </div>
   </div>
