@@ -48,6 +48,7 @@ ru:
     bio: "О себе"
     save: "Сохранить"
     success_save: "Профиль изменен"
+    change_photo: "Изменить фото"
     errors:
       name_too_long: "Максимальная длина имени 30 знаков"
       website_too_long: "Максимальная длина ссылки 30 знаков"

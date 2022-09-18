@@ -28,3 +28,12 @@ if (textArea) textArea.oninput = function() {
     textArea.style.height = 28;
     textArea.style.height = Math.min(textArea.scrollHeight, limit)+"px";
 }
+
+// Submit file
+
+window.submitFile = submitFile;
+
+function submitFile(buttonId) {
+    var button = document.getElementById(buttonId);
+    if (button) button.click();
+}

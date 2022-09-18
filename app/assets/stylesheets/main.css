@@ -37,6 +37,11 @@ h1 span{
     padding: 0px;
 }
 
+.link{
+    color: rgb(13,110,253);
+    cursor: pointer;
+}
+
 /* Navbar */
 
 .navbar-logo{
@@ -153,4 +158,11 @@ h1 span{
     .full-height-screen{
         min-height: 80vh;
     }
+}
+
+/* User avatar */
+
+.user-avatar{
+    border-radius: 50%;
+    border: 1px solid rgb(235,235,235);
 }
