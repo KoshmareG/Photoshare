@@ -36,4 +36,7 @@ ru:
     new_photo:
       text_invalid: "Максимальный размер сообщения 2000 знаков"
       photo_missing: "Для публикации необходимо выбрать фото"
+  edit_profile:
+    main_info: "Основная информация"
+    password: "Пароль"
     

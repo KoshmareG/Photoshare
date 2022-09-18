@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "home", action: :show, controller: "home"
 
   resources :photos
+  resources :users, only: [:edit, :update]
   resources :profiles, only: [:show]
 end
