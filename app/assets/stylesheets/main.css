@@ -139,10 +139,13 @@ h1 span{
 
 .show-photo{
     max-height: 85vh;
-    display: flex;
     margin: auto;
 }
 
 .show-box{
     background-color: black;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
