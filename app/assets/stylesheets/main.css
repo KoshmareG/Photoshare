@@ -144,8 +144,13 @@ h1 span{
 
 .show-box{
     background-color: black;
-    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(min-width: 1024px){
+    .full-height-screen{
+        min-height: 80vh;
+    }
 }
