@@ -1,11 +1,11 @@
 <div class="columns is-mobile is-centered mt-3">
-  <div class="column is-10-desktop is-12-mobile">
+  <div class="column is-10-desktop is-12-tablet is-12-mobile">
     <div class="box padding-none">
-      <div class="columns is-gapless">
-        <div class="column is-6-desktop is-12-mibile pb-0 show-box">
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-6-desktop is-12-tablet is-12-mobile pb-0 show-box full-height-screen">
           <%= image_tag(@photo.images.first, class: "show-photo") %>
         </div>
-        <div class="column is-6-desktop is-12-mibile">
+        <div class="column is-6-desktop is-12-tablet is-12-mobile">
           <div class="custom-header">
             <p class="has-text-weight-semibold"><%= @photo.user.username %></p>
             <p></p>
