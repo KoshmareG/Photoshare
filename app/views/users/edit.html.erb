@@ -17,7 +17,7 @@
         <div class="column is-narrow">
           <%= form_for @user do |f| %>
             <%= f.label :avatar, t("edit_profile.change_photo"), class: "link" %>
-            <%= f.file_field :avatar, multiple: true, onchange: "submitFile('submit_avatar')", style: "display: none" %>
+            <%= f.file_field :avatar, onchange: "submitFile('submit_avatar')", style: "display: none" %>
             <%= f.submit "", id: "submit_avatar", style: "display: none" %>
           <% end %>
         </div>
