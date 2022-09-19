@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_18_105317) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_19_123126) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_105317) do
     t.index ["photo_id"], name: "index_hashtags_on_photo_id"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "photo_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_likes_on_photo_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "photos", force: :cascade do |t|
     t.string "text"
     t.integer "likes_count", default: 0, null: false
@@ -80,5 +89,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_105317) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "hashtags", "photos"
+  add_foreign_key "likes", "photos"
+  add_foreign_key "likes", "users"
   add_foreign_key "photos", "users"
 end
