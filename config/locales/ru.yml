@@ -15,6 +15,7 @@ ru:
     password_blank: "Необходимо указать пароль"
     password_confirmation_confirmation: "Пароли не совпадают"
     password_too_short: "Пароль слишком короткий. Необходмимо минимум 6 знаков"
+    current_password_invalid: "Неверный старый пароль"
   sign_in_page:
     forgot_password: "Забыли пароль?"
     dont_have_account: "У Вас нет аккаунта? "
@@ -53,4 +54,9 @@ ru:
       name_too_long: "Максимальная длина имени 30 знаков"
       website_too_long: "Максимальная длина ссылки 30 знаков"
       bio_too_long: "Максимальная длина информации о себе 30 знаков"
+    password_page:
+      new_password: "Новый пароль"
+      password_confirmation: "Повторите пароль"
+      current_password: "Старый пароль"
+      update: "Изменить"
     
