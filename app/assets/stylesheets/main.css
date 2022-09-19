@@ -166,3 +166,17 @@ h1 span{
     border-radius: 50%;
     border: 1px solid rgb(235,235,235);
 }
+
+/* Likes */
+
+.like-button{
+    margin-left: 13px;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+/* Hidden */
+
+.hidden{
+    display: none;
+}

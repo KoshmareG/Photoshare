@@ -59,4 +59,6 @@ ru:
       password_confirmation: "Повторите пароль"
       current_password: "Старый пароль"
       update: "Изменить"
+  show_photo:
+    likes: "Отметок 'нравится': "
     

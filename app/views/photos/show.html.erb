@@ -7,9 +7,10 @@
         </div>
         <div class="column is-6-desktop is-12-tablet is-12-mobile">
           <div class="custom-header">
-            <p class="has-text-weight-semibold"><%= @photo.user.username %></p>
-            <p></p>
+            <%= render "header", photo: @photo %>
           </div>
+          <%= render "likes", photo: @photo %>
+          <%= render "text", photo: @photo %>
         </div>
       </div>
     </div>

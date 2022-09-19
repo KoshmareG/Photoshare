@@ -1,0 +1,8 @@
+<div class="columns is-gapless is-mobile is-vcentered mb-1">
+  <div class="column is-narrow" style="display: flex">
+    <%= image_tag("icons/house.svg", size: "24", class: "like-button") %>
+  </div>
+  <div class="column is-narrow">
+    <p class="has-text-weight-semibold is-size-6 pt-1" style="color: black"><%= t("show_photo.likes") + photo.likes_count.to_s %></p>
+  </div>
+</div>
