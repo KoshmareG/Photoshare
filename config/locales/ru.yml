@@ -61,4 +61,7 @@ ru:
       update: "Изменить"
   show_photo:
     likes: "Отметок 'нравится': "
+  navbar:
+    profile: "Профиль"
+    exit: "Выйти"
     

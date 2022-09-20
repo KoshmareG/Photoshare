@@ -1,0 +1,11 @@
+<div class="dropdown is-right" id="profile_button">
+  <div class="custom-navbar-item">
+    <%= button_tag (show_user_avatar current_user, 24, "btn navbar-profile-button"), onclick: "dropdown('profile_button')", class: "btn icon-button" %>
+  </div>
+  <div class="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <%= link_to t("navbar.profile"), profile_path(current_user), class: "dropdown-item" %>
+      <%= link_to t("navbar.exit"), destroy_user_session_url, data: {turbo_method: :delete}, class: "dropdown-item", style: "color: rgb(255,56,96)" %>
+    </div>
+  </div>
+</div>
