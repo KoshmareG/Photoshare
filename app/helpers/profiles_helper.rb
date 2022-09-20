@@ -6,11 +6,13 @@ module ProfilesHelper
         end
     end
 
-    def show_user_avatar user, size
+    def show_user_avatar user, size, add_class = ""
+        add_class = " " + add_class if add_class.present?
+
         if user.avatar.attached?
-            image_tag(user.avatar.variant(resize_to_fill: [size, size]), class: "user-avatar")
+            image_tag(user.avatar.variant(resize_to_fill: [size, size]), class: "user-avatar#{add_class}")
         else
-            image_tag("default_avatar.png", size: "#{size}", class: "user-avatar")
+            image_tag("default_avatar.png", size: "#{size}", class: "user-avatar#{add_class}")
         end
     end
 end
