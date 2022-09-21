@@ -19,4 +19,19 @@ module ProfilesHelper
     def photo_count posts
         " " + t("post_var.#{declension posts.size}").downcase
     end
+
+    def link_creator user
+        if @user.website.present?
+            link = link_parser @user.website
+            link_to link, "http://#{link}"
+        else
+            nil
+        end
+    end
+
+    def link_parser link
+        replacement_ruls = { "http://" => "", "https://" => "", "www." => "", "http://www." => "", "https://www." => "" }
+        matcher = /#{replacement_ruls.keys.join("|")}/
+       link.gsub(matcher, replacement_ruls)
+    end
 end

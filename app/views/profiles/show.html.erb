@@ -9,6 +9,7 @@
         <p class="has-text-weight-semibold"><%= @user.name.present? ? @user.name : nil %></p>
         <p class="has-text-weight-semibold is-inline"><%= separator @photos.size %></p><p class="is-inline"><%= photo_count @photos %></p>
         <p><%= @user.bio.present? ? @user.bio : nil %></p>
+        <%= link_creator @user %>
       </div>
     </div>
     <div class="columns is-multiline is-mobile">
