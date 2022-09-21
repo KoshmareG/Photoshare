@@ -15,4 +15,8 @@ module ProfilesHelper
             image_tag("default_avatar.png", size: "#{size}", class: "user-avatar#{add_class}")
         end
     end
+
+    def photo_count posts
+        " " + t("post_var.#{declension posts.size}").downcase
+    end
 end

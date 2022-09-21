@@ -64,4 +64,8 @@ ru:
   navbar:
     profile: "Профиль"
     exit: "Выйти"
+  post_var:
+    first: "Пост"
+    second: "Поста"
+    third: "Постов"
     

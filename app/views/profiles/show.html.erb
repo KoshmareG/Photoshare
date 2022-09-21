@@ -1,0 +1,16 @@
+<div class="columns is-mobile is-centered mt-3">
+  <div class="column is-8-desktop is-12-tablet is-12-mobile">
+    <div class="columns is-mobile mb-5">
+      <div class="column is-4">
+        <%= show_user_avatar @user, 150, "display-center" %>
+      </div>
+      <div class="column is-8">
+        <p class="is-size-4"><%= @user.username %></p>
+        <p class="has-text-weight-semibold is-inline"><%= separator @photos.size %></p><p class="is-inline"><%= photo_count @photos %></p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-mobile">
+      <%= render partial: "photos/photo", collection: @photos %>
+    </div>
+  </div>
+</div>
