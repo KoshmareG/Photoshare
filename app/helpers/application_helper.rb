@@ -4,7 +4,7 @@ module ApplicationHelper
             "third"
         elsif count % 10 == 1
             "first"
-        elsif
+        else
             "second"
         end
     end
