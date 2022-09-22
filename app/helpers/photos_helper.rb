@@ -8,7 +8,7 @@ module PhotosHelper
     end
 
     def show_all_photo photo
-        link_to (image_tag(photo.images.first.variant(resize_to_fill: [700, 700]))), photo_path(photo), style: "display: flex"
+        link_to (image_tag(photo.images.first.variant(resize_to_fill: [1200, 1200]))), photo_path(photo), style: "display: flex"
     end
 
     def text_parser string
@@ -23,5 +23,9 @@ module PhotosHelper
             end
         end
         text.join.html_safe
+    end
+
+    def hashtag_parser text
+        text.scan(/#[[:word:]]+/).uniq!
     end
 end
