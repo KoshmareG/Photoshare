@@ -30,7 +30,7 @@ module ProfilesHelper
     end
 
     def link_parser link
-        replacement_ruls = { "http://" => "", "https://" => "", "www." => "", "http://www." => "", "https://www." => "" }
+        replacement_ruls = { "http://" => "", "https://" => "", "www." => "", "http://www." => "", "https://www." => "", /\/$/ => "" }
         matcher = /#{replacement_ruls.keys.join("|")}/
        link.gsub(matcher, replacement_ruls)
     end
