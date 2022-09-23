@@ -26,6 +26,6 @@ module PhotosHelper
     end
 
     def hashtag_parser text
-        text.scan(/#[[:word:]]+/).uniq!
+        text.scan(/#[[:word:]]+/).uniq
     end
 end
