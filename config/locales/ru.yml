@@ -68,7 +68,17 @@ ru:
     first: "Пост"
     second: "Поста"
     third: "Постов"
+  subscription_var:
+    first: "Подписка"
+    second: "Подписки"
+    third: "Подписок"
+  followers_var:
+    first: "Подписчик"
+    second: "Подписчика"
+    third: "Подписчиков"
   profile:
     no_posts: "Постов пока нет"
     profile_edit: "Редактировать профиль"
+    subscribe: "Подписаться"
+    unsubscribe: "Отписаться"
     

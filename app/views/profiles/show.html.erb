@@ -7,8 +7,8 @@
       <div class="column is-8">
         <%= render "profile_buttons", user: @user %>
         <p class="has-text-weight-semibold mb-3"><%= @user.name.present? ? @user.name : nil %></p>
-        <p class="has-text-weight-semibold is-inline"><%= separator @photos.size %></p><p class="is-inline"><%= photo_count @photos %></p>
-        <p class="mt-3"><%= @user.bio.present? ? @user.bio : nil %></p>
+        <%= render "profile_stats", photos: @photos, user: @user %>
+        <p><%= @user.bio.present? ? @user.bio : nil %></p>
         <%= link_creator @user %>
       </div>
     </div>

@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   resources :photos do
     resources :likes, only: [:create]
   end
+
+  resources :users do
+    resources :subscribes, only: [:create]
+  end
+
   resources :users, only: [:edit, :update]
   resources :profiles, only: [:show]
 end

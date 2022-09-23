@@ -6,6 +6,7 @@
     <% if user.id == current_user.id %>
       <%= link_to t("profile.profile_edit"), edit_user_path(user), class: "button is-small" %>
     <% else %>
+      <%= subscribe_button user %>
     <% end %>
   </div>
 </div>
