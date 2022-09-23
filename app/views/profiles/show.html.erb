@@ -13,7 +13,11 @@
       </div>
     </div>
     <div class="columns is-multiline is-mobile">
-      <%= render partial: "photos/photo", collection: @photos %>
+      <% if @photos.present? %>
+        <%= render partial: "photos/photo", collection: @photos %>
+      <% else %>
+        <%= render partial: "profiles/photo_missing" %>
+      <% end %>
     </div>
   </div>
 </div>

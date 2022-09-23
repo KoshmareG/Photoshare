@@ -68,4 +68,6 @@ ru:
     first: "Пост"
     second: "Поста"
     third: "Постов"
+  profile:
+    no_posts: "Постов пока нет"
     
