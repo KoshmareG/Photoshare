@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
   has_many :photos, dependent: :destroy
+  has_many :subscribes, dependent: :destroy
   has_many :likes
 
   validates :username, presence: true, length: { maximum: 35 }, uniqueness: true
