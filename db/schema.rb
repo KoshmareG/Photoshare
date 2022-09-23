@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_23_125617) do
 
   create_table "subscribes", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "user_subscribe", default: 0, null: false
+    t.integer "user_subscribe", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_subscribes_on_user_id"
@@ -90,8 +90,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_23_125617) do
     t.string "bio"
     t.string "gender"
     t.date "birthday"
-    t.integer "subscription_count"
-    t.integer "followers_count"
+    t.integer "subscription_count", default: 0
+    t.integer "followers_count", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
