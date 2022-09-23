@@ -1,0 +1,11 @@
+<div class="columns mb-0">
+  <div class="column  is-narrow pb-0">
+    <p class="is-size-4"><%= user.username %></p>
+  </div>
+  <div class="column pl-0">
+    <% if user.id == current_user.id %>
+      <%= link_to t("profile.profile_edit"), edit_user_path(user), class: "button is-small" %>
+    <% else %>
+    <% end %>
+  </div>
+</div>
