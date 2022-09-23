@@ -1,0 +1,11 @@
+<div class="columns mb-0">
+  <div class="column">
+    <p class="has-text-weight-semibold is-inline"><%= separator photos.size %></p><p class="is-inline"><%= counter photos.size, "post_var" %></p>
+  </div>
+  <div class="column">
+    <p class="has-text-weight-semibold is-inline"><%= separator user.subscription_count %></p><p class="is-inline"><%= counter user.subscription_count, "subscription_var" %></p>
+  </div>
+  <div class="column">
+    <p class="has-text-weight-semibold is-inline"><%= separator user.followers_count %></p><p class="is-inline"><%= counter user.followers_count, "followers_var" %></p>
+  </div>
+</div>
