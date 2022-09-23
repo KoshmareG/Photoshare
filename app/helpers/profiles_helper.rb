@@ -16,8 +16,8 @@ module ProfilesHelper
         end
     end
 
-    def photo_count posts
-        " " + t("post_var.#{declension posts.size}").downcase
+    def counter count, data
+        " " + t("#{data}.#{declension count}").downcase
     end
 
     def link_creator user
