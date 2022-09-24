@@ -1,6 +1,8 @@
 class LikesController < ApplicationController
+    before_action :authenticate_user!
+    
     def index
-        
+        @likes = Like.includes(:user, :photo).where(photo_id: Photo.where(user_id: current_user.id))
     end
 
     def create

@@ -1,0 +1,12 @@
+<div class="columns is-mobile is-vcentered mb-0">
+  <div class="column is-narrow pb-0">
+    <%= link_to (show_user_avatar like.user, 40), profile_path(like.user) %>
+  </div>
+  <div class="column pb-0">
+    <p class="has-text-weight-semibold is-inline"><%= link_to like.user.username, profile_path(like.user), style: "color: black" %></p><p class="is-inline"><%= t("like.liked") %></p>
+  </div>
+  <div class="column is-narrow pb-0">
+    <%= link_to (image_tag(like.photo.images.first.variant(resize_to_fill: [40, 40]))), photo_path(like.photo) %>
+  </div>
+</div>
+<div class="line mb-1"></div>
