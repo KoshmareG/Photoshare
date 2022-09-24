@@ -6,9 +6,7 @@
           <%= image_tag(@photo.images.first, class: "show-photo") %>
         </div>
         <div class="column is-6-desktop is-12-tablet is-12-mobile">
-          <div class="custom-header">
-            <%= render "header", photo: @photo %>
-          </div>
+          <%= render "header", photo: @photo %>
           <%= render "likes", photo: @photo %>
           <%= render "text", photo: @photo %>
         </div>
