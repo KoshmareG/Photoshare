@@ -6,6 +6,7 @@ class PhotosController < ApplicationController
     end
 
     def index
+        @posts = Photo.includes(:user).where(user_id: current_user.subscribes.pluck(:user_subscribe)).order(created_at: :desc)
     end
 
     def show
