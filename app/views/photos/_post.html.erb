@@ -3,6 +3,8 @@
   <div class="column is-12-desktop is-12-tablet is-12-mobile show-box padding-none">
     <%= image_tag(post.images.first) %>
   </div>
-  <%= render "likes", photo: post %>
+  <turbo-frame id="likes_<%= post.id %>">
+    <%= render "likes", photo: post %>
+  </turbo-frame>
   <%= render "text", photo: post %>
 </div>
