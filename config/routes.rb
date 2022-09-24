@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :subscribes, only: [:create]
   end
 
+  resources :likes, only: [:index]
   resources :users, only: [:edit, :update]
   resources :profiles, only: [:show]
 end

@@ -1,4 +1,8 @@
 class LikesController < ApplicationController
+    def index
+        
+    end
+
     def create
         photo = Photo.find(params[:photo_id])
 
