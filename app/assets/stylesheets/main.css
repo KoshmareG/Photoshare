@@ -156,6 +156,7 @@ h1 span{
 .show-photo{
     max-height: 85vh;
     margin: auto;
+    display: flex;
 }
 
 .show-box{
@@ -163,6 +164,7 @@ h1 span{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 @media(min-width: 1024px){
@@ -190,4 +192,20 @@ h1 span{
 
 .hidden{
     display: none;
+}
+
+/* Image carousel */
+
+.slide-button{
+    filter: invert(60%);
+    position: absolute;
+    top: 50%;
+}
+
+.previous-button{
+    left: 1%;
+}
+
+.next-button{
+    right: 1%;
 }

@@ -2,8 +2,14 @@
   <div class="column is-10-desktop is-12-tablet is-12-mobile">
     <div class="box padding-none">
       <div class="columns is-gapless is-multiline">
-        <div class="column is-6-desktop is-12-tablet is-12-mobile pb-0 show-box full-height-screen">
-          <%= image_tag(@photo.images.first, class: "show-photo") %>
+        <div class="column is-6-desktop is-12-tablet is-12-mobile pb-0 show-box full-height-screen" >
+            <%= render partial: "slide", collection: @slides %>
+            <% unless @slides.size <= 1 %>
+              <%= label_tag "previous-button", image_tag("chevron-compact-left.svg", size: "40", class: "slide-button previous-button") %>
+              <%= button_tag "", onclick: "switchSlide(-1)", id: "previous-button", style: "display: none" %>
+              <%= label_tag "next-button", image_tag("chevron-compact-right.svg", size: "40", class: "slide-button next-button") %>
+              <%= button_tag "", onclick: "switchSlide(1)", id: "next-button", style: "display: none" %>
+            <% end %>
         </div>
         <div class="column is-6-desktop is-12-tablet is-12-mobile">
           <%= render "header", photo: @photo %>

@@ -37,3 +37,29 @@ function submitFile(buttonId) {
     var button = document.getElementById(buttonId);
     if (button) button.click();
 }
+
+// Image carousel
+
+window.switchSlide = switchSlide;
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function switchSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    if (slides) {
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", showSlides(slideIndex));

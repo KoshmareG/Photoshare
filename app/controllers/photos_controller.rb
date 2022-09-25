@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
 
     def show
         @photo = Photo.includes(:user).find(params[:id])
+        @slides = @photo.images
     end
 
     def new
