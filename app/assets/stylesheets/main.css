@@ -198,6 +198,8 @@ h1 span{
 
 .slide-button{
     filter: invert(60%);
+    opacity: 50%;
+    cursor: pointer;
     position: absolute;
     top: 50%;
 }
