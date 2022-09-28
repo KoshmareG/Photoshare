@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :photos, dependent: :destroy
   has_many :subscribes, dependent: :destroy
   has_many :likes
+  has_many :comments
 
   validates :username, presence: true, length: { maximum: 35 }, uniqueness: true
   validates :name, length: { maximum: 30 }
