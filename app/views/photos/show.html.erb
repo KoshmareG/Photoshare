@@ -13,10 +13,14 @@
         </div>
         <div class="column is-6-desktop is-12-tablet is-12-mobile" style="position: relative">
           <%= render "header", photo: @photo %>
-          <%= render "likes", photo: @photo %>
+          <turbo-frame id="likes_<%= @photo.id %>">
+            <%= render "likes", photo: @photo %>
+          </turbo-frame>
           <div class="overflow comment-area scrollbar">
             <%= render "text", photo: @photo %>
-            <%= render partial: "comments/comment", collection: @photo.comments.select {|comment| comment["parent_id"] == nil} %>
+            <turbo-frame id="comments">
+              <%= render partial: "comments/comment", collection: @photo.comments.select {|comment| comment["parent_id"] == nil} %>
+            </turbo-frame>
           </div>
           <%= render "comments/comment_form" %>
         </div>
