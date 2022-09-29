@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :photos do
     resources :likes, only: [:create]
+    resources :comments
   end
 
   resources :users do

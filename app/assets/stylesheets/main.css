@@ -170,7 +170,19 @@ h1 span{
 @media(min-width: 1024px){
     .full-height-screen{
         min-height: 80vh;
+        max-height: 80vh;
     }
+}
+
+.overflow{
+    overflow: auto;
+}
+
+.text-area-down{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /* User avatar */

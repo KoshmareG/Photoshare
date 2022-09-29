@@ -1,0 +1,13 @@
+<%= form_for([@photo, @photo.comments.build]) do |f| %>
+<div class="columns is-mobile is-vcentered text-area-down">
+  <div class="column is-narrow pl-5 pr-0">
+    <%= show_user_avatar current_user, 30 %>
+  </div>
+    <div class="column pl-0 pr-0">
+      <%= f.text_area :text, rows: "1", autocomplite: :off, placeholder: t("comments.new_comment"), id: "resize-textarea", class: "text-area-photo" %>
+    </div>
+    <div class="column is-narrow pl-0">
+      <%= f.button t("comments.submit"), type: "submit", class: "link icon-button has-text-weight-semibold pr-3" %>
+    </div>
+  </div>
+<% end %>
