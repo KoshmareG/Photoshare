@@ -6,3 +6,6 @@
     <p class="is-inline has-text-weight-semibold mr-2"><%= comment.user.username %></p><p class="is-inline"><%= comment.text %></p>
   </div>
 </div>
+<div class="pl-5">
+  <%= render partial: "comments/comment", collection: @photo.comments.select {|child_comment| child_comment["parent_id"] == comment.id} %>
+</div>
