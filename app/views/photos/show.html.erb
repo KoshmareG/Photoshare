@@ -16,7 +16,7 @@
           <%= render "likes", photo: @photo %>
           <div class="overflow comment-area">
             <%= render "text", photo: @photo %>
-            <%= render partial: "comments/comment", collection: @photo.comments %>
+            <%= render partial: "comments/comment", collection: @photo.comments.select {|comment| comment["parent_id"] == nil} %>
           </div>
           <%= render "comments/comment_form" %>
         </div>
