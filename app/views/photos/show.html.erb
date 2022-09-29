@@ -14,7 +14,7 @@
         <div class="column is-6-desktop is-12-tablet is-12-mobile" style="position: relative">
           <%= render "header", photo: @photo %>
           <%= render "likes", photo: @photo %>
-          <div class="overflow" style="display: none">
+          <div class="overflow comment-area">
             <%= render "text", photo: @photo %>
             <%= render partial: "comments/comment", collection: @photo.comments %>
           </div>

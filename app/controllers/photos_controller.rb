@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
     end
 
     def show
-        @photo = Photo.includes(:user, :comments).find(params[:id])
+        @photo = Photo.includes(:user, comments: [:user]).find(params[:id])
     end
 
     def new
