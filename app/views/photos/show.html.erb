@@ -14,7 +14,7 @@
         <div class="column is-6-desktop is-12-tablet is-12-mobile" style="position: relative">
           <%= render "header", photo: @photo %>
           <%= render "likes", photo: @photo %>
-          <div class="overflow comment-area">
+          <div class="overflow comment-area scrollbar">
             <%= render "text", photo: @photo %>
             <%= render partial: "comments/comment", collection: @photo.comments.select {|comment| comment["parent_id"] == nil} %>
           </div>
