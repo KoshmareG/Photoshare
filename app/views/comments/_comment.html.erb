@@ -6,11 +6,11 @@
     <%= link_to comment.user.username, profile_path(comment.user), data: { turbo: false }, class: "is-inline has-text-weight-semibold has-text-grey-dark is-size-6-5 mr-2" %><p class="is-inline is-size-6-5"><%= comment.text %></p>
     <div class="columns is-mobile">
       <div class="column pb-1">
-        <p class="is-size-7 has-text-grey">Закрыть</p>
+        <%= button_tag "Ответы", onclick: "dropdownList('parent_comment_#{comment.id}')", class: "icon-button is-size-7 has-text-grey", style: "cursor: pointer" %>
       </div>
     </div>
   </div>
 </div>
-<div class="pl-5">
+<div class="hidden pl-6" id="parent_comment_<%= comment.id %>">
   <%= render partial: "comments/comment", collection: @photo.comments.select { |child_comment| child_comment["parent_id"] == comment.id } %>
 </div>

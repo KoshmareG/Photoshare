@@ -158,7 +158,7 @@ h1 span{
 /* Show photo */
 
 .show-photo{
-    max-height: 85vh;
+    max-height: 80vh;
     margin: auto;
     display: flex;
 }
@@ -175,6 +175,12 @@ h1 span{
     .full-height-screen{
         min-height: 80vh;
         max-height: 80vh;
+    }
+}
+
+@media(max-width: 1023px){
+    .show-contant{
+        height: 50vh;
     }
 }
 

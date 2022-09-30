@@ -63,3 +63,11 @@ function showSlides(n) {
 }
 
 document.addEventListener("DOMContentLoaded", showSlides(slideIndex));
+
+// Dropdown list
+
+window.dropdownList = dropdownList
+
+function dropdownList(elementId) {
+    document.getElementById(elementId).classList.toggle("hidden");
+}
