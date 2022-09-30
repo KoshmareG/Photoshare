@@ -1,11 +1,16 @@
-<div class="columns is-mobile pl-3 pr-3 mb-0">
+<div class="columns is-mobile pl-3 pr-3 pt-2 mb-0">
   <div class="column is-narrow pr-0">
-    <%= show_user_avatar comment.user, 25 %>
+    <%= link_to (show_user_avatar comment.user, 27), profile_path(comment.user), data: { turbo: false } %>
   </div>
-  <div class="column pl-2">
-    <p class="is-inline has-text-weight-semibold mr-2"><%= comment.user.username %></p><p class="is-inline"><%= comment.text %></p>
+  <div class="column pl-2 pt-2">
+    <%= link_to comment.user.username, profile_path(comment.user), data: { turbo: false }, class: "is-inline has-text-weight-semibold has-text-grey-dark is-size-6-5 mr-2" %><p class="is-inline is-size-6-5"><%= comment.text %></p>
+    <div class="columns is-mobile">
+      <div class="column pb-1">
+        <p class="is-size-7 has-text-grey">Закрыть</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="pl-5">
-  <%= render partial: "comments/comment", collection: @photo.comments.select {|child_comment| child_comment["parent_id"] == comment.id} %>
+  <%= render partial: "comments/comment", collection: @photo.comments.select { |child_comment| child_comment["parent_id"] == comment.id } %>
 </div>

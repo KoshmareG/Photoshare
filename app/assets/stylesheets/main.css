@@ -88,6 +88,10 @@ h1 span{
     display: inline-block;
 }
 
+.is-size-6-5{
+    font-size: 0.90rem;
+}
+
 /* Buttons */
 
 .icon-button{
