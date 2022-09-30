@@ -11,7 +11,7 @@
             <%= button_tag "", onclick: "switchSlide(1)", id: "next-button", style: "display: none" %>
           <% end %>
         </div>
-        <div class="column is-6-desktop is-12-tablet is-12-mobile" style="position: relative;">
+        <div class="column is-6-desktop is-12-tablet is-12-mobile show-contant" style="position: relative;">
           <%= render "header", photo: @photo %>
           <turbo-frame id="likes_<%= @photo.id %>">
             <%= render "likes", photo: @photo %>
