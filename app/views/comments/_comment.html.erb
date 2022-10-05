@@ -6,7 +6,9 @@
     <%= link_to comment.user.username, profile_path(comment.user), data: { turbo: false }, class: "is-inline has-text-weight-semibold has-text-grey-dark is-size-6-5 mr-2" %><p class="is-inline is-size-6-5"><%= comment.text %></p>
     <div class="columns is-mobile">
       <div class="column pb-1">
-        <%= button_tag "Ответы", onclick: "dropdownList('parent_comment_#{comment.id}')", class: "icon-button is-size-7 has-text-grey", style: "cursor: pointer" %>
+        <% if @photo.comments.any? { |child_comment| child_comment["parent_id"] == comment.id } %>
+          <%= button_tag "Ответы", onclick: "dropdownList('parent_comment_#{comment.id}')", class: "icon-button is-size-7 has-text-grey", style: "cursor: pointer" %>
+        <% end %>
       </div>
     </div>
   </div>
