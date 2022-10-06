@@ -20,7 +20,7 @@
             <%= render "text", photo: @photo %>
             <turbo-frame id="comments">
               <p class="pl-3 pb-3"><%= separator(@photo.comments.size) + counter(@photo.comments.size, "comments_var") %></p>
-              <%= render partial: "comments/comment", collection: @photo.comments.select {|comment| comment["parent_id"] == nil} %>
+              <%= render partial: "comments/comment", collection: @photo.comments.select { |comment| comment["parent_id"] == nil } %>
             </turbo-frame>
           </div>
           <%= render "comments/comment_form" %>
