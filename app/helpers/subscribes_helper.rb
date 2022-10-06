@@ -1,5 +1,5 @@
 module SubscribesHelper
-    def subscribe_button user
+    def subscribe_button(user)
         if current_user.subscribes.find_by(user_subscribe: user.id).present?
             name = t("profile.unsubscribe")
             class_style = "button is-small"
