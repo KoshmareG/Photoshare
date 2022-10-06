@@ -1,5 +1,5 @@
 module PhotosHelper
-    def new_photo_error photo
+    def new_photo_error(photo)
         if photo.invalid?
             t("errors.new_photo.text_invalid")
         else
@@ -7,11 +7,11 @@ module PhotosHelper
         end
     end
 
-    def show_all_photo photo
+    def show_all_photo(photo)
         link_to (image_tag(photo.images.first.variant(resize_to_fill: [700, 700]))), photo_path(photo), data: {turbo: false}, style: "display: flex"
     end
 
-    def text_parser string
+    def text_parser(string)
         hashtag_rule = /(#[[:word:]]+)/
         text = []
 
@@ -25,7 +25,7 @@ module PhotosHelper
         text.join.html_safe
     end
 
-    def hashtag_parser text
+    def hashtag_parser(text)
         text.scan(/#[[:word:]]+/).uniq
     end
 end
