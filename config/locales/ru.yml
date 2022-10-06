@@ -76,6 +76,10 @@ ru:
     first: "Подписчик"
     second: "Подписчика"
     third: "Подписчиков"
+  comments_var:
+    first: "Комментарий"
+    second: "Комментария"
+    third: "Комментариев"
   profile:
     no_posts: "Постов пока нет"
     profile_edit: "Редактировать профиль"
