@@ -1,18 +1,26 @@
 <div class="columns is-mobile pl-3 pr-3 pt-2 mb-0">
   <div class="column is-narrow pr-0">
-    <%= link_to (show_user_avatar comment.user, 27), profile_path(comment.user), data: { turbo: false } %>
+    <%= link_to (show_user_avatar comment.user, 26), profile_path(comment.user), data: { turbo: false } %>
   </div>
   <div class="column pl-2 pt-2">
     <%= link_to comment.user.username, profile_path(comment.user), data: { turbo: false }, class: "is-inline has-text-weight-semibold has-text-grey-dark is-size-6-5 mr-2" %><p class="is-inline is-size-6-5"><%= comment.text %></p>
     <div class="columns is-mobile">
-      <div class="column pb-1">
+      <div class="column is-narrow pb-1">
+        <% unless comment.parent_id.present? %>
+          <%= button_tag t("comments.get_answer"), onclick: "dropdownList('new_child_comment_#{comment.id}')", class: "icon-button is-size-7 has-text-grey has-text-weight-semibold", style: "cursor: pointer" %>
+        <% end %>
+      </div>
+      <div class="column is-narrow pb-1">
         <% if @photo.comments.any? { |child_comment| child_comment["parent_id"] == comment.id } %>
-          <%= button_tag "Ответы", onclick: "dropdownList('parent_comment_#{comment.id}')", class: "icon-button is-size-7 has-text-grey", style: "cursor: pointer" %>
+          <%= button_tag t("comments.answers"), onclick: "dropdownList('parent_comment_#{comment.id}')", class: "icon-button is-size-7 link has-text-weight-semibold" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-<div class="hidden pl-6" id="parent_comment_<%= comment.id %>">
+<div class="hidden pl-5" id="new_child_comment_<%= comment.id %>">
+  <%= render "comments/child_comment_form", comment_id: comment.id %>
+</div>
+<div class="hidden pl-5" id="parent_comment_<%= comment.id %>">
   <%= render partial: "comments/comment", collection: @photo.comments.select { |child_comment| child_comment["parent_id"] == comment.id } %>
 </div>

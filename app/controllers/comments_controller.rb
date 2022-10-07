@@ -2,8 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     @photo = Photo.find(params[:photo_id])
-    @comment = @photo.comments.create(comment_params)
-    @comment.user_id = current_user.id
+    @comment = @photo.comments.create(text: comment_params[:text], parent_id: comment_params[:parent], user_id: current_user.id)
 
     if @comment.valid?
       @comment.save

@@ -93,4 +93,6 @@ ru:
   comments:
     new_comment: "Оставить комментарий"
     submit: "Отправить"
+    get_answer: "Ответить"
+    answers: "Ответы"
     
