@@ -95,4 +95,6 @@ ru:
     submit: "Отправить"
     get_answer: "Ответить"
     answers: "Ответы"
+  home_page:
+    show_all_comments: "Посмотреть все комментарии"
     

@@ -7,5 +7,12 @@
     <%= render "likes", photo: post %>
   </turbo-frame>
   <%= render "text", photo: post %>
+  <% if post.comments.size >= 1 %>
+    <div class="columns is-mobile">
+      <din class="column pt-2 pb-0">
+        <%= link_to "#{t("home_page.show_all_comments")} (#{post.comments.size.to_s})", photo_path(post), data: { turbo: false }, class: "all_comments_link pl-3" %>
+      </din>
+    </div>
+  <% end %>
   <%= render partial: "comments/post_comment", collection: post.last_comments %>
 </div>

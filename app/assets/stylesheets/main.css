@@ -250,3 +250,9 @@ h1 span{
 .next-button{
     right: 1%;
 }
+
+/* Home page */
+
+.all_comments_link{
+    color: rgb(100,100,100);
+}
