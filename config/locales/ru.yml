@@ -60,7 +60,7 @@ ru:
       current_password: "Старый пароль"
       update: "Изменить"
   show_photo:
-    likes: "Отметок 'нравится': "
+    likes: "Отметок \"нравится\": "
   navbar:
     profile: "Профиль"
     exit: "Выйти"
