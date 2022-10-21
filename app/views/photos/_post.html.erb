@@ -7,4 +7,5 @@
     <%= render "likes", photo: post %>
   </turbo-frame>
   <%= render "text", photo: post %>
+  <%= render partial: "comments/post_comment", collection: post.last_comments %>
 </div>
