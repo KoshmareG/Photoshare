@@ -6,11 +6,11 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @posts = Photo.includes(:user, comments: [:user]).where(user_id: current_user.subscribes.pluck(:user_subscribe)).order(created_at: :desc)
+    @posts = Photo.includes(:user, :likes).where(user_id: current_user.subscribes.pluck(:user_subscribe)).order(created_at: :desc)
   end
 
   def show
-    @photo = Photo.includes(:user, comments: [:user]).find(params[:id])
+    @photo = Photo.includes(:user, :likes, comments: [:user]).find(params[:id])
   end
 
   def new
