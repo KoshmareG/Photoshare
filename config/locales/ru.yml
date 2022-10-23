@@ -98,4 +98,29 @@ ru:
   home_page:
     show_all_comments: "Посмотреть все комментарии"
     new_comment: "Написать комментарий"
+  time:
+    seconds:
+      first: "Секунда"
+      second: "Секунды"
+      third: "Секунд"
+    minutes:
+      first: "Минута"
+      second: "Минуты"
+      third: "Минут"
+    hours:
+      first: "Час"
+      second: "Часа"
+      third: "Часов"
+    days:
+      first: "День"
+      second: "Дня"
+      third: "Дней"
+    months:
+      first: "Месяц"
+      second: "Месяца"
+      third: "Месяцев"
+    years:
+      first: "Год"
+      second: "Года"
+      third: "Лет"
     
